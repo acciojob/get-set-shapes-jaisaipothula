@@ -5,7 +5,17 @@ class Rectangle {
     this._height = height;
   }
 
-  // Other methods like getArea()
+  get width() {
+    return this._width;
+  }
+
+  get height() {
+    return this._height;
+  }
+
+  getArea() {
+    return this._width * this._height;
+  }
 }
 
 class Square extends Rectangle {
@@ -14,7 +24,9 @@ class Square extends Rectangle {
     this._side = side;
   }
 
-  // Method specific to Square like getPerimeter()
+  getPerimeter() {
+    return 4 * this._side;
+  }
 }
 
 // Export classes if needed
